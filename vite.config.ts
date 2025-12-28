@@ -10,8 +10,13 @@ export default defineConfig(({ mode }) => {
       host: '0.0.0.0',
     },
     preview: {
-      port: parseInt(process.env.PORT || '3000'),
+      port: parseInt(process.env.PORT || '10000'),
       host: '0.0.0.0',
+      strictPort: true,
+      allowedHosts: [
+        'doctor-technologia.onrender.com',
+        '.onrender.com'
+      ]
     },
     plugins: [react()],
     define: {
